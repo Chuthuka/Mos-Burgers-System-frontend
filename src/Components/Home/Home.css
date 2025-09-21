@@ -95,7 +95,29 @@ background-position: bottom;
     margin-top: 30px;
     text-align: center;
   }
-  
+  @media (max-width: 768px) {
+    .land-page-header {
+        padding: 1rem;
+    }
+
+    .land-page-nav-links {
+        display: none;
+    }
+
+    .land-page-hero {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .land-page-hero-text {
+        font-size: 3rem;
+    }
+
+    .land-page-action-buttons {
+        grid-template-columns: 1fr;
+    }
+} 
+
   
   
 

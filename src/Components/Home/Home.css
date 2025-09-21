@@ -1,0 +1,101 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary:  #ffcc00;
+    ;
+    --text-light: #ffffff;
+    --text-dark: #2d3436;
+    --overlay: rgba(0, 0, 0, 0.7);
+}
+
+.land-page-body {
+    min-height: 100vh;
+    background: black;
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+
+.land-page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.land-page-header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 3rem;
+}
+
+.land-page-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+
+.land-page-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 3rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/main-background.jpg') ;
+    background-size: cover;
+background-position: bottom;
+    z-index: 1;
+}
+
+.land-page-hero-content {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.land-page-hero-text {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.land-page-hero-subtext {
+    
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #cccccc;
+}
+
+
+.get-started-container {
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  
+  
+

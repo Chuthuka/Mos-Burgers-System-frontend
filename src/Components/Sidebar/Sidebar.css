@@ -12,4 +12,38 @@
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   }
   
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin: 15px 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .menu li a:hover {
+    background: #000000;
+  }
+  
+  .menu li a svg {
+    margin-right: 12px;
+  }
   

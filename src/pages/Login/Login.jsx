@@ -31,7 +31,42 @@ const Login = () => {
       setSuccess("");
     }
   };
+return (
+    <div className="login-container">
+      <div className="login-box">
+        <h2>MOS Burgers</h2>
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={credentials.email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              value={credentials.password}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
 
+          {error && <div className="error-message">{error}</div>}
+          {success && <div className="success-message">{success}</div>}
+
+          <button type="submit" className="btn-login">Login</button>
+        </form>
+      </div>
+    </div>
+  );
   
 };
 

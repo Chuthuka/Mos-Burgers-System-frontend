@@ -1,0 +1,13 @@
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #121212; 
+    color: #fff;
+  }
+  
+  .dashboard-main {
+    flex: 1;
+    margin-left: 250px; 
+    padding: 40px;
+    backdrop-filter: blur(2px);
+  }

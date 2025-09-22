@@ -12,7 +12,24 @@ const AddProduct = () => {
   const[description,setDescription] = useState("");
   const [loading, setLoading] = useState(false); 
 
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
   
+    if (file) {
+      const options = {
+        maxSizeMB: 1, 
+        maxWidthOrHeight: 800, 
+        useWebWorker: true,
+      };
+  
+      try {
+        const compressedFile = await imageCompression(file, options);
+        setImage(compressedFile);
+      } catch (error) {
+        console.error("Image compression failed:", error);
+      }
+    }
+  };
 };
 
 export default AddProduct;

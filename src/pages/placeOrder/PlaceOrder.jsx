@@ -6,9 +6,25 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 
 const PlaceOrder = () => {
-  
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [customerName, setCustomerName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [amountGiven, setAmountGiven] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [orderPlaced, setOrderPlaced] = useState(false);
+  const [error, setError] = useState("");
 
-
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/stock/All")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+  }, []);
 
   const updateQuantity = (itemId, change) => {
     setCart((prevCart) =>
@@ -22,6 +38,9 @@ const PlaceOrder = () => {
     );
   };
 
+const removeFromCart = (itemId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.itemId !== itemId));
+  };
 
 
   const totalAmount = cart.reduce(
@@ -32,7 +51,7 @@ const PlaceOrder = () => {
 
 
 
-  
+
 
 const addToCart = (product) => {
     setCart((prevCart) => {

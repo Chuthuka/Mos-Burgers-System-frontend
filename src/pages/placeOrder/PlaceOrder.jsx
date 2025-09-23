@@ -10,6 +10,20 @@ const PlaceOrder = () => {
 
 
 
+  const updateQuantity = (itemId, change) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.itemId === itemId
+            ? { ...item, qty: Math.max(1, item.qty + change) }
+            : item
+        )
+        .filter((item) => item.qty > 0)
+    );
+  };
+
+
+  
 const addToCart = (product) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find(

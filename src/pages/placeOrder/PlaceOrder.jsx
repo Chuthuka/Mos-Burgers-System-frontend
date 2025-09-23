@@ -10,10 +10,22 @@ const PlaceOrder = () => {
 
 
 
+const addToCart = (product) => {
+    setCart((prevCart) => {
+      const existingItem = prevCart.find(
+        (item) => item.itemId === product.itemId
+      );
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.itemId === product.itemId ? { ...item, qty: item.qty + 1 } : item
+        );
+      }
+      return [...prevCart, { ...product, qty: 1 }];
+    });
+  };
 
 
 
-  
 
  const filteredProducts =
     selectedCategory === "All"

@@ -23,7 +23,17 @@ const PlaceOrder = () => {
   };
 
 
+
+  const totalAmount = cart.reduce(
+    (sum, item) => sum + item.qty * item.price,
+    0
+  );
+  const balance = amountGiven ? amountGiven - totalAmount : 0;
+
+
+
   
+
 const addToCart = (product) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find(

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/src/assets/items-list-bg.jpg') repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.pos-page {
+    display: flex;
+    height: 100vh;
+    margin-left: 250px;
+}
+

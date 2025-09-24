@@ -24,3 +24,19 @@
   align-items: center;
   margin-bottom: 25px;
 }
+.btn-add-customer {
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add-customer:hover {
+  background-color: #3e8e41;
+}

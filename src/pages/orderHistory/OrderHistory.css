@@ -1,0 +1,15 @@
+.order-history-container {
+    margin-left: 250px; 
+    padding: 2rem;
+    background-color: #111113; 
+    min-height: 100vh;
+    color: #fff;
+  }
+  
+  .order-history-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+  }
+  
+  

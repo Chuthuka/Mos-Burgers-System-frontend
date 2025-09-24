@@ -44,6 +44,14 @@ const CustomerManagement = () => {
     setSelectedCustomer(customer);
     setShowModal(true); 
   };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedCustomer((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   
 
 

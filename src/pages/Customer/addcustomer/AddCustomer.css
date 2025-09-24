@@ -1,0 +1,26 @@
+.add-customer-page {
+    display: flex;
+    height: 100vh;
+    margin-left: 250px; 
+    justify-content: center;
+    align-items: center;
+    background: url('/src/assets/items-list-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  } 
+  
+  .add-customer-container {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 2;
+    position: relative;
+  }
+  
+  

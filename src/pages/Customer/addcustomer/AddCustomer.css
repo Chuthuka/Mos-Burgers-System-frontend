@@ -22,5 +22,61 @@
     z-index: 2;
     position: relative;
   }
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
   
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .add-customer-input-group {
+    width: 100%; 
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .customer-data {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #141413;
+    font-weight: 800;
+  }
+  
+  .customer-data:focus {
+    border-color: #0056b3;
+  }
+  
+  .btn-add-customer {
+    padding: 10px;
+    background: #ff9800;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .btn-add-customer:hover {
+    background: #e68900;
+  }
+  
+
   

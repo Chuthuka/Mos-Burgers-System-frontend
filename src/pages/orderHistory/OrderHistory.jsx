@@ -23,7 +23,40 @@ const OrderHistory = () => {
   };
 
 
-  
+
+  const formatDate = (dateString) => {
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    };
+    return new Date(dateString).toLocaleString('en-US', options);
+  };
+
+  return (
+    <div className="order-history-container">
+      <Sidebar />
+      <div className="order-history-content">
+        <h2>Order History</h2>
+        <div className="order-cards">
+          {orders.map((order) => (
+            <div key={order.id} className="order-card">
+              <h3>Order ID: {order.id}</h3>
+              <p><strong>Customer:</strong> {order.customerName}</p>
+              <p><strong>Total:</strong> Rs. {order.totalAmount.toFixed(2)}</p>
+              <p><strong>Date:</strong> {formatDate(order.orderDate)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+
+
 };
 
 export default OrderHistory;

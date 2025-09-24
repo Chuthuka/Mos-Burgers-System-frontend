@@ -33,8 +33,24 @@ const CustomerManagement = () => {
   const filteredCustomers = customers.filter((customer) =>
     customer.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
+ const handleEditClick = (customer) => {
+    setUpdatedCustomer({
+      id: customer.id,
+      name: customer.name,
+      address: customer.address,
+      contactNumber: customer.contactNumber,
+      email: customer.email,
+    });
+    setSelectedCustomer(customer);
+    setShowModal(true); 
+  };
   
+
+
+
+
+
+
 };
 
 export default CustomerManagement;

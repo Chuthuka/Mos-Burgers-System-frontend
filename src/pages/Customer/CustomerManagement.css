@@ -40,3 +40,48 @@
 .btn-add-customer:hover {
   background-color: #3e8e41;
 }
+.search-input {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  width: 260px;
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.customer-table-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 20px;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.customer-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.customer-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  font-style: italic;
+}
